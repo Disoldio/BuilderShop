@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="content">
+    <main>
+        <header>
+            <a href="index.php" class="logo-name">
+                <img src="./img/logo.png" class="logo"> 
+                <h2>Bobus</h2>
+            </a>
+            <a href="cart.php" class="kor">
+                <img src="./img/kor.png">
+            </a>
+        </header>
+        <div class="main-foto">
+            <a href="catalog.php"><button class="butcat"><img src="./img/catalog.png" alt=""> Каталог</button></a>
+            <form class="poisk" method="POST" action="catalog.php">
+                <input type="text" name="search" placeholder="Поиск">
+                <button class="search"><img src="img/sea.png" alt=""></button>
+            </form>
+        </div>
+        <div class="main-collection">
+            <div class="main-box">
+                <div class="text">
+                    <h3>Инстументы для строительства</h3>
+                    <p>по низким ценам</p>
+                </div>
+                <img src="./img/dr1.png">
+            </div>
+            <div class="box">
+                <div class="text">
+                    <h3>Садовая мебель</h3>
+                    <p>отдыхайте с комфортом</p>
+                </div>
+                <img src="./img/sad.jpg.png">
+            </div>
+            <div class="box">
+                <div class="text">
+                    <h3>Услуги по ремонту и бесплатное обслуживание</h3>
+                </div>
+                <img src="./img/lin.png">
+            </div>
+            <div class="box">
+                <div class="text">
+                    <h3>Бренды</h3>
+                    <p>выбирайте любимые марки</p>
+                </div>
+                <img src="./img/kuh.png">
+            </div>
+        </div>
+    </main>
+</div>
+<footer>
+    <div class="footer-content">
+        <div class="footer-box">
+            <h2>КОМПАНИЯ</h2>
+            <div class="aboba">
+                <a href="#">Наша компания</a>
+                <a href="#">Наши марка</a>
+                <a href="#">Как стать поставщиком</a>
+                <a href="#">Развитие сети</a>
+                <a href="#">Наши вакансии</a>
+                <a href="#">Контакты</a>
+            </div>
+        </div>
+        <div class="calibri">
+            <div class="footer-box anton1">
+                <h2>УСЛУГИ РОЗНИЧНОГО МАГАЗИНА</h2>
+                <div class="aboba">
+                    <a href="#">Услуги</a>
+                    <a href="#">Доставка</a>
+                    <a href="#">Самовывоз товара</a>
+                    <a href="#">Пункты выдачи заказов</a>
+                    <a href="#">Возврат товара</a>
+                    <a href="#">Кредит</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-box">
+            <h2>ИНТЕРНЕТ-МАГАЗИН</h2>
+            <div class="aboba">
+                <a href="catalog.php">Каталог</a>
+                <a href="#">Как заказать</a>
+                <a href="#">Как оплатить</a>
+                <a href="#">Доставка и самовывоз</a>
+                <a href="#">Клиентская поддержка</a>
+                <a href="#">Вопросы и ответы</a> 
+            </div>
+
+        </div>
+        <div class="footer-contact">
+            <div class="rasism">
+                <input type="email" placeholder="  Введите Ваш Е-mail"><button class="but-email">Подписаться на рассылку</button>
+            </div>
+            <p>Подписываясь на рассылку, я даю согласие на обработку персональных данных и на получение рекламных сообщений и новостей о товарах и услугах.
+                Сайт защищён системой reCAPTCHA, к нему применяется политика конфиденциальности and и условия использования Google.</p>
+            
+            
+        </div>  
+    </div>
+    
+</footer>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

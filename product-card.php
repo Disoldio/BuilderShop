@@ -17,7 +17,7 @@
             
             $materialID = $_GET['id'];
 
-            include_once "get/get-current-material.php";
+            require "get/get-current-material.php";
             echo "<div class='yabloko'>";
             echo "<div class='bolda'>";
             echo "<img class='proImg' src=' ".$product['img']."'>"."<br>";
@@ -26,8 +26,16 @@
             echo "<h2> Название материала: ".$product['name']."</h2><br>";
             echo "<h3>Описание материала: ".$product['discription']."</h3><br>";
             echo "<h4>Цена материала: ".((int)$product['price']).".00 Руб</h4><br>";
-            echo "<button onclick='AddProduct(".$product['id'].")'>Добавить в корзину</button>";
-            echo "<button onclick='IncreaseProduct(".$product['id'].")'>Увеличить количество</button>";
+
+            echo "<button id='product-interraction-btn' product-id=".$product['id']." product-in-cart=".$materialIsInCart.">Interraction</button>";
+
+            // if($materialIsInCart){
+            //     echo "<button onclick='IncreaseProduct(".$product['id'].")'>Увеличить количество</button>";
+            // }
+            // else{
+            //     echo "<button onclick='AddProduct(".$product['id'].")'>Добавить в корзину</button>";
+            // }
+            
             echo "</div>";
             echo "</div>";
             

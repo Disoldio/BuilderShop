@@ -1,3 +1,10 @@
+var interractionBtn = document.getElementById("product-interraction-btn");
+
+if(interractionBtn != null){
+    var materialIsInCart = interractionBtn.getAttribute("product-in-cart");
+    var currentProductID = interractionBtn.getAttribute("product-id");
+}
+
 function AddProduct(id){
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "post/add-material.php", true);
@@ -11,6 +18,9 @@ function AddProduct(id){
 
         if(xhr.readyState == 4){
             console.log(this.responseText)
+
+
+
             // var boxes = JSON.parse(this.responseText);
             // for(var box of boxes){
             //     flexBoxes += 
@@ -59,3 +69,32 @@ function IncreaseProduct(id){
         }
     }
 }
+
+function InterractionButtonAddProduct(){
+    AddProduct(currentProductID)
+    materialIsInCart = true;
+
+    UpdateInterractionButton()
+}
+
+function InterractionButtonIncreaseProduct(){
+    IncreaseProduct(currentProductID)
+
+    UpdateInterractionButton()
+}
+
+function UpdateInterractionButton(){
+    if(!materialIsInCart){
+        interractionBtn.addEventListener("click", InterractionButtonAddProduct)
+        interractionBtn.innerText = "В корзину"
+    }
+    else{
+        interractionBtn.removeEventListener("click", InterractionButtonAddProduct)
+
+        interractionBtn.addEventListener("click", InterractionButtonIncreaseProduct)
+        interractionBtn.innerText = "Увеличить кол-во"
+    }
+}
+
+if(interractionBtn != null)
+    UpdateInterractionButton()
